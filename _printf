@@ -1,0 +1,48 @@
+./" Manpage for _printf
+.TH man 1 "29 Novomber 2023" "1.0" "_printf man page"
+.SH NAME
+_printf \- format and print data
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENTS]...
+.SH DESCRIPTION
+Print ARGUMENT according to FORMAT:
+
+FORMAT controls the output as in C _printf. Interpreted sequance are:
+.TP
+\e"
+double quote
+.TP
+\en
+new line
+.TP
+\et
+horizontal tab
+.TP
+\ev
+vertical tab
+
+%% a single %
+
+%d Specify ARGUMENT as an integer.
+
+%c Specify ARGUMENT as a character.
+
+%s Specify ARGUMENT as a string.
+
+.SH EXAMPLE
+The function _printf takes a string and according to the formats in it prints ARGUMENTS.
+.TP
+#include "main.h"
+.TP
+int main(void)
+.TP
+{
+.TP
+	_printf("Hello %s", "world");
+.TP
+	return (0);
+.TP	
+}
+
+.SH AUTHOR
+Written by Ravan Aliyev and Aytac Huseynli.
