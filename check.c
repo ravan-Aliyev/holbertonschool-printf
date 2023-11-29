@@ -20,10 +20,14 @@ int check_function(char format, va_list args)
 			length++;
 			break;
 		case 's':
-			for (x = va_arg(args, char *); *x; x++)
+			x = va_arg(args, char *);
+			if (x == NULL)
+				x = "(null)";
+			while (*x)
 			{
 				_putchar(*x);
 				length++;
+				x++;
 			}
 			break;
 		case '%':
