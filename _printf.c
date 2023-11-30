@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL || (strlen(format) == 1 && *format == '%'))
 	{
 		exit(98);
+		return (-1);
 	}
 	va_start(args, format);
 	while (*format)
